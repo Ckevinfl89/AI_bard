@@ -9,12 +9,14 @@ load_dotenv()
 token = os.environ.get("COOKIE_1")
 cookie_2 = os.environ.get("COOKIE_2")
 cookie_3 = os.environ.get("COOKIE_3")
+cookie_4 = os.environ.get("COOKIE_4")
 
 session = requests.Session()
 session.headers = SESSION_HEADERS
 session.cookies.set("__Secure-1PSID", token)
 session.cookies.set("__Secure-1PSIDTS", cookie_2)
 session.cookies.set("__Secure-1PSIDCC", cookie_3)
+session.cookies.set("GOOGLE_ABUSE_EXEMPTION", cookie_4)
 
 bard = Bard(token=token, session=session)
 
@@ -57,5 +59,8 @@ class Chatbot():
 chatbot = Chatbot()
 chatbot.chat()
 
+# python -m venv venv
+
+# venv\scripts\activate
 
 # venv\Scripts\activate
