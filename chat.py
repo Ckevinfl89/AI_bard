@@ -4,7 +4,7 @@ import requests
 from bardapi.constants import SESSION_HEADERS
 from bardapi import Bard
 from stti import SpeechToTextInterpreter
-
+from ttsi import TextToSpeechPrinter
 load_dotenv()
 
 token = os.environ.get("COOKIE_1")
@@ -51,12 +51,12 @@ class Chatbot():
         while True:
             user_input = input("How may I assist you ")
             if user_input.lower() == "quit":
-                print("Bye, have an Amazing time! ")
+                print("Bye, May the force be with you! ")
                 break
 
             response = self.get_response(user_input)
             print(response)
-with SpeechToTextInterpreter():
+with TextToSpeechPrinter(), SpeechToTextInterpreter():
    chatbot = Chatbot()
    chatbot.chat()
 
