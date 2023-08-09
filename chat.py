@@ -24,7 +24,7 @@ bard = Bard(token=token, session=session)
 
 class Chatbot():
     def __init__(self):
-        self.name = "Son Goku"
+        self.name = "luke skywalker"
         self.user_name = "user "
 
     def save_user_info(self, user_name):
@@ -51,7 +51,7 @@ class Chatbot():
         while True:
             user_input = input("How may I assist you ")
             if user_input.lower() == "quit":
-                print("Bye, May the force be with you! ")
+                print("May the force be with you! ")
                 break
 
             response = self.get_response(user_input)

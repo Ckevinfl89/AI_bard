@@ -23,7 +23,7 @@ class SpeechToTextInterpreter:
                     return text
 
             except sr.UnknownValueError:
-                print("Sorry I dont understand your question")
+                print("Sorry I dont understand your question, please try again")
             except sr.RequestError:
                 print('Sorry, I had trouble connecting. Try Again')
             except Exception:
